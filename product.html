@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toko Boba</title>
+    <link rel="stylesheet" href="style4.css" />
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css" />
+
+    <!--=============== REMIXICONS ===============-->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" /> -->
+  </head>
+  <body>
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="index.html" class="nav__logo">BOBA SERBA RASA</a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html" class="nav__link">Home</a>
+            </li>
+
+            <!-- <li class="nav__item">
+              <a href="#about" class="nav__link">About Me</a>
+            </li> -->
+
+            <li class="nav__item">
+              <a href="product.html" class="nav__link">Product</a>
+            </li>
+            <!-- 
+            <li class="nav__item">
+              <a href="login.html" class="button">Login</a>
+            </li> -->
+          </ul>
+
+          <!-- close button -->
+          <div class="nav__close" id="nav-close">
+            <i class="ri-close-line"></i>
+          </div>
+        </div>
+
+        <div class="nav__actions">
+          <!-- Theme button -->
+          <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+          <!-- Toggle button -->
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-apps-2-line"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="product" id="product">
+        <h1 class="heading">our <span> products</span></h1>
+
+        <div class="box-container">
+          <div class="box">
+            <div class="image">
+              <img src="image/boba1.png" alt="" />
+            </div>
+            <div class="content">
+              <h3>Chapucino</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="price">Rp15.000</span>
+              <button onclick="addToCart('Boba Chapucino', 15000)">Tambah ke Keranjang</button>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="image">
+              <img src="image/boba2.png" alt="" />
+            </div>
+            <div class="content">
+              <h3>Green Tea</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="price">Rp15.000</span>
+              <button onclick="addToCart('Boba Green Tea', 15000)">Tambah ke Keranjang</button>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="image">
+              <img src="image/boba3.jpg" alt="" />
+            </div>
+            <div class="content">
+              <h3>Taro</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="price">Rp15.000</span>
+              <button onclick="addToCart('Boba Taro', 15000)">Tambah ke Keranjang</button>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="image">
+              <img src="image/boba4.jpg" alt="" />
+            </div>
+            <div class="content">
+              <h3>Strawberry</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="price">Rp15.000</span>
+              <button onclick="addToCart('Boba Strawberry', 15000)">Tambah ke Keranjang</button>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="image">
+              <img src="image/boba5.jpeg" alt="" />
+            </div>
+            <div class="content">
+              <h3>Coklat</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="price">Rp15.000</span>
+              <button onclick="addToCart('Boba Coklat', 15000)">Tambah ke Keranjang</button>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="image">
+              <img src="image/boba6.jpg" alt="" />
+            </div>
+            <div class="content">
+              <h3>Bluberry</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="price">Rp15.000</span>
+              <button onclick="addToCart('Boba Bluberry', 15000)">Tambah ke Keranjang</button>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="image">
+              <img src="image/boba7.jpg" alt="" />
+            </div>
+            <div class="content">
+              <h3>Durian</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="price">Rp15.000</span>
+              <button onclick="addToCart('Boba Durian', 15000)">Tambah ke Keranjang</button>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="image">
+              <img src="image/boba8.jpg" alt="" />
+            </div>
+            <div class="content">
+              <h3>Redvalvet</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="price">Rp15.000</span>
+              <button onclick="addToCart('Boba Redvalvet', 15000)">Tambah ke Keranjang</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cart">
+        <h2>Keranjang Belanja</h2>
+        <ul id="cart-items"></ul>
+        <p id="total-price">Total: Rp 0</p>
+        <button onclick="checkout()">Checkout</button>
+      </section>
+    </main>
+
+    <div id="checkout-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Checkout</h2>
+        <form id="checkout-form">
+          <label for="name">Nama:</label>
+          <input type="text" id="name" name="name" required />
+          <label for="address">Alamat:</label>
+          <input type="text" id="address" name="address" required />
+          <label for="phone">No. Telepon:</label>
+          <input type="tel" id="phone" name="phone" required />
+          <div class="payment-methods">
+            <h3>Metode Pembayaran</h3>
+            <select id="payment-method" name="payment-method">
+              <option value="credit-card">Kartu Kredit</option>
+              <option value="bank-transfer">Transfer Bank</option>
+              <option value="e-wallet">E-Wallet</option>
+            </select>
+            <button type="button" onclick="completeCheckout()">Selesaikan Pembayaran</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="delivery-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeDeliveryModal()">&times;</span>
+        <h2>Pesanan Sedang Diantar</h2>
+        <div id="delivery-map"></div>
+        <p>Pesanan Anda sedang dalam perjalanan! Harap tunggu sebentar.</p>
+      </div>
+    </div>
+
+    <script src="product.js"></script>
+  </body>
+</html>
